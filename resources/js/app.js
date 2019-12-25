@@ -9,8 +9,14 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import BootstrapVue from 'bootstrap-vue'
+import moment from 'moment'
 
 Vue.use(BootstrapVue)
+
+
+Vue.filter('fixDate',(created) => {
+    return moment(created).fromNow()
+  })
 
 /**
  * The following block of code may be used to automatically register your
