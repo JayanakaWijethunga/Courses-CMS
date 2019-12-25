@@ -39,7 +39,7 @@ export default {
 
           loadUsers(){
 
-            axios.get('api/series').then((data) => this.series=data.data)
+            axios.get('api/front').then((data) => this.series=data.data)
 
           }
 

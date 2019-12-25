@@ -11,8 +11,11 @@
                 It uses utility classes for typography and spacing to space
                 content out within the larger container.
             </p>
-            <a :href="route" class="btn btn-primary btn-lg"  role="button"
+            <a href="#" class="btn btn-primary btn-lg"  role="button"
                 >Browse</a
+            >
+            <a href="#" class="btn btn-danger btn-lg"  role="button"
+                >Subscribe</a
             >
         </div>
     </div>
@@ -21,8 +24,6 @@
 <script>
 export default {
     mounted() {},
-    props: {
-    route: { type: String, required: true }
-   }
+    
 };
 </script>

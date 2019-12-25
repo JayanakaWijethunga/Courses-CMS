@@ -14,8 +14,9 @@ class SeriesController extends Controller
      */
     public function index()
     {
-        $posts = Series::latest()->take(3)->get();
-        return response()->json($posts);
+        /*$posts = Series::latest()->take(3)->get();
+        return response()->json($posts);*/
+        return view('front.series.index');
     }
 
     /**
@@ -47,7 +48,8 @@ class SeriesController extends Controller
      */
     public function show(Series $series)
     {
-        //
+        $series = Series::find($series);
+        return view('front.series.show')->with('se',$series);
     }
 
     /**

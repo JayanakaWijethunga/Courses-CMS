@@ -33,6 +33,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('banner', require('./components/Banner.vue').default);
 Vue.component('cards', require('./components/Cards.vue').default);
 Vue.component('pricing', require('./components/Pricing.vue').default);
+Vue.component('all-series', require('./components/Series/AllSeries.vue').default);
+Vue.component('series-detail', require('./components/Series/Details.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

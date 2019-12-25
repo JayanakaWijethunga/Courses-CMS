@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <banner></banner>
+    <banner route="{{ route('series.index') }}"></banner>
     <cards></cards>
     <pricing></pricing>
     
