@@ -64,4 +64,6 @@ class SeriesController extends Controller
     {
         //
     }
+
+    
 }

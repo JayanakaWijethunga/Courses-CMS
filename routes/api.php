@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('series','Api\SeriesController');
 
-Route::get('front','HomeController@index');
+//Route::get('front','HomeController@index');

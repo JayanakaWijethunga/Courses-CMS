@@ -8,8 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
 import BootstrapVue from 'bootstrap-vue'
 import moment from 'moment'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
 
 Vue.use(BootstrapVue)
 
@@ -29,12 +33,12 @@ Vue.filter('fixDate',(created) => {
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('banner', require('./components/Banner.vue').default);
-Vue.component('cards', require('./components/Cards.vue').default);
-Vue.component('pricing', require('./components/Pricing.vue').default);
-Vue.component('all-series', require('./components/Series/AllSeries.vue').default);
-Vue.component('series-detail', require('./components/Series/Details.vue').default);
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.component('banner', require('./components/Banner.vue').default);
+
+Vue.component('pricing', require('./components/Front/Pricing.vue').default);
+Vue.component('vid', require('./components/Front/series/Video.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

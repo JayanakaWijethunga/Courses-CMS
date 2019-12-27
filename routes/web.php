@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front');
-});
+
+
+Route::get('/','HomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('series','SeriesController');
+Route::get('series/{series}/episode/{episode_id}','SeriesController@episode')->name('series.episode');
+

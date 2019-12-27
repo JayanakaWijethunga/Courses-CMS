@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        factory(App\Series::class,8)->create();
+        factory(App\Series::class,10)->create()->each(function($series){
+
+            $series->videos()->saveMany(factory(App\Video::class,15)->create());
+
+        });
+
+
     }
 }

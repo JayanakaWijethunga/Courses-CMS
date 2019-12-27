@@ -16,7 +16,8 @@ class SeriesController extends Controller
     {
         /*$posts = Series::latest()->take(3)->get();
         return response()->json($posts);*/
-        return view('front.series.index');
+        $courses = Series::latest()->get();
+        return view('front.series.index')->with('Courses',$courses);
     }
 
     /**
@@ -48,8 +49,8 @@ class SeriesController extends Controller
      */
     public function show(Series $series)
     {
-        $series = Series::find($series);
-        return view('front.series.show')->with('se',$series);
+        $cos = Series::find($series->id);
+        return view('front.series.show')->with('cos',$cos);
     }
 
     /**
@@ -84,5 +85,12 @@ class SeriesController extends Controller
     public function destroy(Series $series)
     {
         //
+    }
+
+    public function episode(Series $series,$episode_id){
+
+        $cos = Series::find($series->id);
+       return view('front.series.video',compact('series','episode_id','cos')); 
+
     }
 }

@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         
         $series = Series::latest()->take(3)->get();
-        return response()->json($series);
+        return view('front')->with('series',$series);
         
         //return view('home');
     }
