@@ -17,7 +17,7 @@ class SeriesController extends Controller
         /*$posts = Series::latest()->take(3)->get();
         return response()->json($posts);*/
         $courses = Series::latest()->get();
-        return view('front.series.index')->with('Courses',$courses);
+        return view('front.series.index')->with('courses',$courses);
     }
 
     /**

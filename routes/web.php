@@ -22,3 +22,8 @@ Auth::routes();
 Route::resource('series','SeriesController');
 Route::get('series/{series}/episode/{episode_id}','SeriesController@episode')->name('series.episode');
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

@@ -8,6 +8,7 @@ class Video extends Model
 {
 
     protected $appends = ['url'];
+    
     public function series(){
 
         return $this->belongsTo(Series::class);

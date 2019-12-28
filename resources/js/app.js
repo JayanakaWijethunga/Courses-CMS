@@ -38,6 +38,7 @@ Vue.filter('fixDate',(created) => {
 
 Vue.component('pricing', require('./components/Front/Pricing.vue').default);
 Vue.component('vid', require('./components/Front/series/Video.vue').default);
+Vue.component('series-component', require('./components/Front/series/Series.vue').default);
 
 
 /**
